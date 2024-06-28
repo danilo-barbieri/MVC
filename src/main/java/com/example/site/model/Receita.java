@@ -4,17 +4,23 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
-
-
+@Entity
 public class Receita {
 
-    private Paciente paciente;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+        @ManyToOne
+        private Paciente paciente;
 
-    private Medico medico;
-    private Medicamento medicamento;
-    private Date dataHoraEnvio;
+        @ManyToOne
+        private Medico medico;
 
+        @ManyToOne
+        private Medicamento medicamento;
 
+        @Temporal(TemporalType.TIMESTAMP)
+        private Date dataHoraEnvio;
 
     public Paciente getPaciente() {
         return paciente;

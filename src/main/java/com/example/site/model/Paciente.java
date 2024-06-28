@@ -1,13 +1,15 @@
 package com.example.site.model;
 
 import jakarta.persistence.*;
+import java.time.LocalDate;
+import java.time.Period;
 
 @Entity
 @Table(name = "paciente")
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer Id;
+    private long Id;
     @Column
     private String nome;
     @Column
@@ -57,4 +59,5 @@ public class Paciente {
     public void setId(int id) {
         this.Id = id;
     }
+
 }

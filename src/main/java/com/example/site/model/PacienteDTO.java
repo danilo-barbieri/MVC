@@ -6,10 +6,6 @@ public class PacienteDTO {
     private String cpf;
     private String planoSaude;
 
-    // Construtores, getters e setters
-
-    public PacienteDTO() {
-    }
 
     public PacienteDTO(String nome, String dataNascimento, String cpf, String planoSaude) {
         this.nome = nome;
@@ -18,7 +14,6 @@ public class PacienteDTO {
         this.planoSaude = planoSaude;
     }
 
-    // Getters e Setters
     public String getNome() {
         return nome;
     }

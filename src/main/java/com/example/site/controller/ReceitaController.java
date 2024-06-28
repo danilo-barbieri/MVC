@@ -30,10 +30,7 @@ public class ReceitaController {
         if (paciente != null) {
             return receitaService.listarReceitasPorPaciente(paciente);
         } else {
-            // Tratar o caso em que o paciente não foi encontrado
             return new ArrayList<>();
         }
     }
-
-    // Outros métodos do controlador relacionados às receitas
 }

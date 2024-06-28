@@ -21,6 +21,11 @@ public class PacienteController {
         return pacienteService.cadastrarPaciente(pacienteDTO.getNome(), pacienteDTO.getCpf(), pacienteDTO.getPlanoSaude());
     }
 
+    @PutMapping("/{id}")
+    public Paciente alterarPaciente(@PathVariable Long id, @RequestBody PacienteDTO pacienteDTO) {
+        return pacienteService.alterarPaciente(id, pacienteDTO.getNome(), pacienteDTO.getCpf(), pacienteDTO.getPlanoSaude());
+    }
+
     @GetMapping("/{id}")
     public Paciente buscarPacientePorId(@PathVariable Long id) {
         return pacienteService.buscarPacientePorId(id);
@@ -30,6 +35,4 @@ public class PacienteController {
     public List<Receita> listarReceitasDoPaciente(@PathVariable Long id) {
         return pacienteService.listarReceitasDoPaciente(id);
     }
-
-    // Outros métodos do controlador relacionados aos pacientes
 }

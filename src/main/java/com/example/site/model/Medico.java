@@ -12,7 +12,6 @@ public class Medico {
     private String CRM;
     @Column
     private String assinaturaDigital;
-
     @Column
     private String senha;
 
